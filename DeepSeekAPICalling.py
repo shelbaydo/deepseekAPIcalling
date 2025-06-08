@@ -10,8 +10,7 @@ payload = json.dumps({
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
-  'Authorization': 'Bearer sk-9052aa7aa92f48089b15fd204ffb0279'
+  "Authorization": f"Bearer {api_key}"
 }
 response = requests.request("POST", url, headers=headers, data=payload)
-print(type(response.text))
 print(response.text)
